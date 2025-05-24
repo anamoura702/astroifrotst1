@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Conheça os Telescópios</title>   
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('imagens/fundo2.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    nav {
+      background-color: rgba(17, 17, 17, 0.8);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: #fff;
+      margin: 4px 0;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+    }
+
+    #telescopios {
+      padding: 60px 20px;
+      background-image: url('imagens/espaco.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    #telescopios h2 {
+      text-align: center;
+      color: orange;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .grid-telescopios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .caixa-telescopio {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .caixa-telescopio img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .caixa-telescopio a button {
+      outline: none;
+      text-decoration: none;
+      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .caixa-telescopio a button:focus{
+      outline: none;
+    }
+
+    .caixa-telescopio a button:hover {
+      background-color: #ddd;
+    }
+
+    @media (max-width: 900px) {
+      .grid-telescopios {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-telescopios {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+
+<body>  <nav>    <div class="menu-toggle" onclick="toggleMenu()">      <span></span>      <span></span>     
+      <span></span>   
+    </div>    <div class="nav-links">      <a href="index.html">Início</a>      <a
+        href="telescopios.html">Telescópios</a>      <a href="contato.html">Contato</a>    </div>  </nav>
+    <section id="telescopios">    <h2>Conheça os Telescópios</h2>    <div class="grid-telescopios">            <div
+        class="caixa-telescopio">        <img src="imagens/telescopio_reflator.jpg" alt="TELESCOPIO COLLETTI">        <a
+          href="telescopio_colleti.html">          <button>COLLETTI</button>        </a>      </div>
+            <div class="caixa-telescopio">        <img src="imagens/telescopio_reflator.jpg" alt="Refrator">        <a
+          href="starbright.html">          <button>CELESTRON STARBRIGHT</button>        </a>      </div>
+            <div class="caixa-telescopio">        <img src="imagens/telescopio_reflator.jpg" alt="Catadióptrico">       
+        <a href="c8n.html">          <button>CELESTRON C8-N</button>        </a>     
+      </div>
+          </div>  </section>
+   
+  <script>    function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }  </script>
+</body>
+
+</html>

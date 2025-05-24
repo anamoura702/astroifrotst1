@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>AstroIfro - Início</title>
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('imagens/fundo2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background-color: rgba(17, 17, 17, 0.8);
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: #fff;
+      margin: 4px 0;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: orange;
+      margin-top: -30px;
+      font-size: 36px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <nav>    <div class="menu-toggle" onclick="toggleMenu()">      <span></span>      <span></span>      <span></span> 
+        </div>    <div class="nav-links">      <a href="index.html">Início</a>      <a
+        href="telescopios.html">Telescópios</a>      <a href="contato.html">Contato</a>    </div>  </nav>
+    <div class="container">    <h1>AstroIfro</h1>    <p>Explorando o universo através da ciência e da educação</p>   
+    <p>Bem-vindo ao AstroIfro, um projeto feito por estudantes e para estudantes!</p> 
+  </div>
+   
+  <script>    function toggleMenu() { document.querySelector('.nav-links').classList.toggle('active'); }  </script>
+</body>
+
+</html>
